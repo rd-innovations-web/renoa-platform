@@ -1,145 +1,186 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Footer } from "../components/layout/Footer";
 import { Header } from "../components/layout/Header";
+import { Footer } from "../components/layout/Footer";
+import { Section } from "../components/ui/Section";
 
 export function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-neutral-950">
+    <>
       <Header />
 
-      <main>
-        <section className="px-5 pb-16 pt-36 sm:px-8 sm:pb-20 lg:px-12 lg:pt-44">
+      <main className="bg-[#faf9f6]">
+        {/* Intro */}
+        <section className="px-5 pb-16 pt-36 sm:px-8 sm:pb-20 lg:pt-44">
           <div className="mx-auto max-w-7xl">
             <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
               About RENOA
             </p>
 
-            <h1 className="mt-5 max-w-5xl text-[clamp(3rem,8vw,7rem)] font-medium leading-[0.95] tracking-[-0.055em]">
-              Design thinking with an execution ecosystem behind it.
+            <h1 className="mt-5 max-w-5xl text-5xl font-medium leading-[0.95] tracking-[-0.05em] sm:text-7xl lg:text-8xl">
+              Thoughtful design.
+              <br />
+              <span className="text-neutral-400">
+                Experienced execution.
+              </span>
             </h1>
 
-            <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:gap-16">
-              <p className="max-w-2xl text-lg leading-8 text-neutral-600">
-                RENOA is the interior design and visualization arm of the
-                RENOA by Treeblock workflow, bringing together spatial
-                planning, 2D documentation, 3D visualization and interior
-                design.
-              </p>
-
-              <p className="max-w-2xl text-base leading-8 text-neutral-500">
-                The goal is simple: understand the space, develop the design,
-                communicate it clearly and help move the approved vision
-                toward execution with a coordinated process.
-              </p>
-            </div>
+            <p className="mt-8 max-w-2xl text-base leading-8 text-neutral-600 sm:text-lg">
+              RENOA is an interior design studio focused on creating
+              thoughtful, functional and visually refined spaces for
+              residential and commercial clients.
+            </p>
           </div>
         </section>
 
-        <section className="bg-neutral-950 px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-12 lg:py-28">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-end">
+        {/* Founder */}
+        <Section className="bg-white">
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-20">
+            <div className="overflow-hidden bg-neutral-100">
+              <img
+                src="/founder-abhilasha.png"
+                alt="Abhilasha Chaudhary, Founder and Design Lead at RENOA"
+                className="aspect-[4/5] w-full object-cover"
+              />
+            </div>
+
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-white/40">
-                RENOA × Treeblock
+              <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+                Founder & Design Lead
               </p>
 
-              <h2 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-[-0.04em] sm:text-5xl lg:text-6xl">
-                Two connected capabilities. One coordinated project journey.
+              <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-6xl">
+                Abhilasha Chaudhary
               </h2>
-            </div>
 
-            <div className="grid gap-8 sm:grid-cols-2">
-              <div className="border-t border-white/15 pt-5">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-                  RENOA
-                </p>
+              <p className="mt-6 text-base leading-8 text-neutral-600 sm:text-lg">
+                Abhilasha leads RENOA's design direction, bringing together
+                spatial planning, interior design, 2D documentation and 3D
+                visualization to develop spaces that balance aesthetics,
+                functionality and the client's requirements.
+              </p>
 
-                <h3 className="mt-4 text-xl font-medium">
-                  Design & Visualization
-                </h3>
+              <div className="mt-8 border-t border-neutral-200 pt-6">
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                      Education
+                    </p>
 
-                <p className="mt-3 text-sm leading-7 text-white/55">
-                  Space planning, 2D layouts, 3D visualization, interior
-                  concepts, materials and design development.
-                </p>
-              </div>
+                    <p className="mt-2 text-sm leading-6 text-neutral-700">
+                      B.Des. in Interior Design
+                      <br />
+                      Galgotias University
+                    </p>
+                  </div>
 
-              <div className="border-t border-white/15 pt-5">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-                  Treeblock
-                </p>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-neutral-400">
+                      Experience
+                    </p>
 
-                <h3 className="mt-4 text-xl font-medium">
-                  Construction & Execution
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-white/55">
-                  Coordinated project execution and construction through the
-                  connected delivery workflow.
-                </p>
+                    <p className="mt-2 text-sm leading-6 text-neutral-700">
+                      5+ years of design experience
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </Section>
 
-        <section className="px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-28">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        {/* RENOA + Treeblock */}
+        <Section>
+          <div className="rounded-[2rem] bg-neutral-950 px-6 py-12 text-white sm:px-10 sm:py-16 lg:px-16">
+            <div className="grid gap-12 lg:grid-cols-2 lg:items-end">
               <div>
-                <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
-                  What matters to us
+                <p className="text-xs uppercase tracking-[0.25em] text-white/40">
+                  Design × Execution
                 </p>
 
-                <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
-                  Clarity before construction.
+                <h2 className="mt-5 text-4xl font-medium leading-tight tracking-[-0.04em] sm:text-5xl">
+                  RENOA by Treeblock
                 </h2>
               </div>
 
-              <div className="grid gap-8 sm:grid-cols-2">
-                {[
-                  [
-                    "Understand",
-                    "Every project starts by understanding the space, requirements and intended use.",
-                  ],
-                  [
-                    "Visualize",
-                    "2D and 3D design help turn an idea into something tangible before execution.",
-                  ],
-                  [
-                    "Refine",
-                    "Design direction is reviewed and refined before the project moves forward.",
-                  ],
-                  [
-                    "Deliver",
-                    "The approved design transitions into a coordinated execution workflow.",
-                  ],
-                ].map(([title, description]) => (
-                  <article
-                    key={title}
-                    className="border-t border-neutral-200 pt-5"
-                  >
-                    <h3 className="text-xl font-medium">{title}</h3>
+              <div>
+                <p className="text-base leading-8 text-white/65">
+                  RENOA works alongside Treeblock as part of a coordinated
+                  design and execution ecosystem. RENOA focuses on design,
+                  visualization and spatial planning, while the wider
+                  execution network supports the journey from approved design
+                  through project completion.
+                </p>
 
-                    <p className="mt-3 text-sm leading-7 text-neutral-500">
-                      {description}
-                    </p>
-                  </article>
-                ))}
+                <p className="mt-5 text-sm leading-7 text-white/45">
+                  This collaborative approach helps clients move from an
+                  initial concept to a finished space with greater continuity
+                  between design and execution.
+                </p>
               </div>
+            </div>
+          </div>
+        </Section>
+
+        {/* Capabilities */}
+        <Section className="bg-white">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+                Our approach
+              </p>
+
+              <h2 className="mt-5 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
+                Design that considers the whole space.
+              </h2>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                "Residential interiors",
+                "Commercial interiors",
+                "2D planning & layouts",
+                "3D visualization",
+                "Material & finish direction",
+                "Project execution coordination",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 border-t border-neutral-200 py-5"
+                >
+                  <Check size={17} className="shrink-0 text-neutral-500" />
+                  <span className="text-sm text-neutral-700">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Section>
+
+        {/* CTA */}
+        <Section>
+          <div className="flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
+                Start a conversation
+              </p>
+
+              <h2 className="mt-4 max-w-2xl text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
+                Have a space in mind?
+              </h2>
             </div>
 
             <Link
-              to="/contact"
-              className="mt-14 inline-flex min-h-12 items-center gap-2 rounded-full bg-neutral-950 px-6 text-sm font-medium text-white transition hover:bg-neutral-800"
+              to="/start-project"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-neutral-950 px-6 text-sm font-medium text-white transition hover:bg-neutral-800"
             >
-              Talk to RENOA
+              Start a project
               <ArrowUpRight size={17} />
             </Link>
           </div>
-        </section>
+        </Section>
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 }

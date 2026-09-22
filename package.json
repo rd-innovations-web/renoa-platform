@@ -5,17 +5,13 @@
   "description": "RENOA by Treeblock - Interior Design & Project Management Platform",
   "packageManager": "pnpm@10.15.0",
   "scripts": {
-    "dev": "pnpm --parallel --filter @renoa/web --filter @renoa/api dev",
-    "dev:web": "pnpm --filter @renoa/web dev",
+    "dev": "pnpm --parallel --filter web --filter @renoa/api dev",
+    "dev:web": "pnpm --filter web dev",
     "dev:api": "pnpm --filter @renoa/api dev",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
     "lint": "pnpm -r lint",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
-  },
-  "devDependencies": {
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.2"
   }
 }
