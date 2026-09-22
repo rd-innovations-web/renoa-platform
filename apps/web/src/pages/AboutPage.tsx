@@ -36,12 +36,12 @@ export function AboutPage() {
         {/* Founder */}
         <Section className="bg-white">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-20">
-            <div className="overflow-hidden bg-neutral-100">
-              <img
-                src="/founder-abhilasha-img.jpg"
-                alt="Abhilasha Chaudhary, Founder and Design Lead at RENOA"
-                className="aspect-[4/5] w-full object-cover"
-              />
+            <div className="overflow-hidden rounded-[1.5rem] bg-neutral-100">
+                <img
+                    src="/founder-abhilasha-img.jpg"
+                    alt="Abhilasha Chaudhary, Founder and Design Lead at RENOA"
+                    className="block aspect-[4/5] h-auto w-full object-cover object-top"
+                />
             </div>
 
             <div>
