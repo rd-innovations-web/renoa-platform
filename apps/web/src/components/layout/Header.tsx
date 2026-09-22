@@ -30,17 +30,15 @@ export function Header() {
         <div className="overflow-hidden rounded-[1.5rem] border border-white/20 bg-white/90 shadow-lg backdrop-blur-xl sm:rounded-full">
           <div className="flex min-h-[60px] items-center justify-between px-4 sm:px-6">
             <Link
-              to="/"
-              onClick={closeMenu}
-              className="group flex min-w-0 items-center gap-2"
-            >
-              <span className="text-lg font-semibold tracking-[0.16em] sm:text-xl">
-                RENOA
-              </span>
-
-              <span className="hidden text-[10px] uppercase tracking-[0.18em] text-neutral-500 sm:inline">
-                by Treeblock
-              </span>
+                to="/"
+                onClick={closeMenu}
+                className="group flex min-w-0 items-center"
+                >
+                <img
+                    src="/renoa-logo-transparent1.png"
+                    alt="RENOA by Treeblock"
+                    className="h-9 w-auto object-contain sm:h-10"
+                />
             </Link>
 
             {/* Desktop navigation */}
