@@ -17,6 +17,8 @@
   background: var(--renoa-paper);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -25,17 +27,27 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--renoa-paper);
 }
 
 body {
   margin: 0;
   min-width: 320px;
   background: var(--renoa-paper);
+  overflow-x: hidden;
 }
 
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -46,4 +58,19 @@ img {
 ::selection {
   background: var(--renoa-black);
   color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
