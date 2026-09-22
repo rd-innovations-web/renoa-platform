@@ -35,7 +35,7 @@ export function Header() {
                 className="group flex min-w-0 items-center"
                 >
                 <img
-                    src="/renoa-logo-transparent1.png"
+                    src="/renoa-logo-black.png"
                     alt="RENOA by Treeblock"
                     className="h-9 w-auto object-contain sm:h-10"
                 />
